@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Section </title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            text-align: center;
+            letter-spacing: 4px;
+        }
+        #userRegisterForm{
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(238, 245, 245);
+            padding: 40px;
+            width: 30%;
+            margin: 50px auto;
+            gap: 20px;
+        }
+        
+        #userRegisterForm input, #userRegisterForm select{
+            letter-spacing: 1px;
+            /* height: 30px; */
+            padding: 5px 10px;
+            text-align: center;
+        }
+
+        input[type="submit"]{
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+            border: none;
+            outline: none;
+            font-size: 18px;
+        }
+        input[type="submit"]:hover{
+            color: #007bff;
+            background-color: transparent;
+            border: 1px solid;
+            cursor: pointer;
+        }
+        a{
+            text-decoration: none;
+            text-align: center;
+        }
+        a:hover{
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Section</h1>
+    <div>
+        <form id="userRegisterForm">
+            <input type="text" placeholder="Enter Name" id="name" required>
+            <input type="number" placeholder="Enter Age" id="age" required>
+            <input type="text" placeholder="Enter Place" id="place" required>
+            <select id="batch_name" required>
+                <option value="">Select Batch Name</option>
+                <option value="WEB-13">WEB-13</option>
+                <option value="WEB-14">WEB-14</option>
+                <option value="WEB-15">WEB-15</option>
+                <option value="WEB-16">WEB-16</option>
+                <option value="WEB-17">WEB-17</option>
+                <option value="WEB-18">WEB-18</option>
+                <option value="WEB-19">WEB-19</option>
+                <option value="WEB-20">WEB-20</option>
+                <option value="WEB-21">WEB-21</option>
+                <option value="WEB-22">WEB-22</option>
+                <option value="WEB-23">WEB-23</option>
+                <option value="WEB-24">WEB-24</option>
+                <option value="WEB-25">WEB-25</option>
+            </select>
+            <select id="profession"  required>
+                <option value="">Select Profession</option>
+                <option value="FSD">FSD</option>
+                <option value="Frontend">Frontend</option>
+                <option value="Backend">Backend</option>
+                <option value="Student">Student</option>
+            </select>
+
+            <input type="submit" value="Register">
+            <a href="../index.html"> Return to Panel</a>
+        </form>
+    </div>
+</body>
+</html>
+
+<script src="../scripts/user.js"></script>

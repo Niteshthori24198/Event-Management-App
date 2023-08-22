@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="../styles/data.admin.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <style>
+        main{
+            margin: 50px;
+        }
+        main > div:first-child{
+            margin-bottom: 30px;
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        main > div:first-child input , main > div:first-child select{
+            width: 30%;
+            padding: 5px 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="./data.html">Data</a>
+        <a href="./report.html">Report</a>
+        <a href="#" id="loginLogoutBtn">Login</a>
+    </nav>
+    <main>
+        <div>
+            <input type="text" placeholder="Search By Name" id="searchByName" onchange="handleSearchByName(event)">
+            <select id="sortByAge" onchange="handleSortByAge(event)">
+                <option value="">Sort By Age</option>
+                <option value="asc">Low To High</option>
+                <option value="desc">High To Low</option>
+            </select>
+            <select id="filterByProfession" onchange="handleFilterByProfession(event)">
+                <option value="">Filter By Profession</option>
+                <option value="FSD">FSD</option>
+                <option value="Frontend">Frontend</option>
+                <option value="Backend">Backend</option>
+                <option value="Student">Student</option>
+            </select>
+        </div>
+        <div id="containe_data">
+            <!-- append data here -->
+        </div>
+        <div id="containe_pagebtns">
+            <!-- append page buttons -->
+        </div>
+    </main>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Update User</h4>
+                </div>
+                <form id="userUpdateForm"  onsubmit="handleUpdateUser(event)">
+                    <div class="modal-body">
+                        <input type="text" placeholder="Enter Name" id="name" required>
+                        <input type="number" placeholder="Enter Age" id="age" required>
+                        <input type="text" placeholder="Enter Place" id="place" required>
+                        <select id="batch_name" required>
+                            <option value="">Select Batch Name</option>
+                            <option value="WEB-13">WEB-13</option>
+                            <option value="WEB-14">WEB-14</option>
+                            <option value="WEB-15">WEB-15</option>
+                            <option value="WEB-16">WEB-16</option>
+                            <option value="WEB-17">WEB-17</option>
+                            <option value="WEB-18">WEB-18</option>
+                            <option value="WEB-19">WEB-19</option>
+                            <option value="WEB-20">WEB-20</option>
+                            <option value="WEB-21">WEB-21</option>
+                            <option value="WEB-22">WEB-22</option>
+                            <option value="WEB-23">WEB-23</option>
+                            <option value="WEB-24">WEB-24</option>
+                            <option value="WEB-25">WEB-25</option>
+                        </select>
+                        <select id="profession" required>
+                            <option value="">Select Profession</option>
+                            <option value="FSD">FSD</option>
+                            <option value="Frontend">Frontend</option>
+                            <option value="Backend">Backend</option>
+                            <option value="Student">Student</option>
+                        </select>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-default">Update</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" id="closeBtn">Close</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
+
+<script src="../scripts/data.admin.js"></script>
+<script src="../scripts/navbar.js"></script>

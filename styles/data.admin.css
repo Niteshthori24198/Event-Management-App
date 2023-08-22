@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#containe_data {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+    width: 80%;
+    margin: auto;
+    line-height: 30px;
+}
+
+#containe_data > div{
+    border: 1px solid gray; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+
+#containe_data > div img{
+    width: 100px;
+    margin: auto;
+}
+
+#containe_data > div button{
+    width: 100px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#containe_data > div button:hover{
+    width: 100px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #151515;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modal-body input, .modal-body select{
+    padding: 5px;
+    text-align: center;
+}
+
+
+
+#containe_pagebtns{
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#containe_pagebtns button {
+    padding: 5px 8px;
+}

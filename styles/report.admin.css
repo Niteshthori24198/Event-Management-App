@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#reportTable{
+    text-align: center;
+    width: 60%;
+    margin: auto;
+}
+
+#reportTable tr{
+   height: 40px;
+}

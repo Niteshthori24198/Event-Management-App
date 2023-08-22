@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Admin</title>
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <style>
+        #adminLoginForm{
+            width: 30%;
+            margin: 50px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 40px;
+            background-color: rgb(233, 247, 247);
+        }
+        #adminLoginForm input {
+            padding: 5px 10px;
+        }
+        input[type="submit"]{
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+            border: none;
+            outline: none;
+            font-size: 18px;
+        }
+        input[type="submit"]:hover{
+            color: #007bff;
+            background-color: transparent;
+            border: 1px solid;
+            cursor: pointer;
+        }   
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="./data.html">Data</a>
+        <a href="./report.html">Report</a>
+        <a href="#" id="loginLogoutBtn">Login</a>
+    </nav>
+    <div>
+        <form id="adminLoginForm">
+            <h1>Login Here</h1>
+            <input type="email" placeholder="Email" id="email">
+            <input type="password" placeholder="Password" id="password">
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</body>
+</html>
+
+<script src="../scripts/login.admin.js"></script>
+<script src="../scripts/navbar.js"></script>
